@@ -7,6 +7,7 @@ set (PROJECT_SOURCES
         "main.cpp"
         "IStringWriter.cpp"
         "ConsoleStringWriter.cpp"
-        "FileStringWriter.cpp")
+        "FileStringWriter.cpp"
+        "StringWriterFactory.cpp")
 
 add_executable(StringWriter ${PROJECT_SOURCES})

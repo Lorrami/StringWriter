@@ -1,13 +1,17 @@
 #include <iostream>
+#include <memory>
 
 #include "FileStringWriter.h"
 #include "ConsoleStringWriter.h"
+#include "StringWriterFactory.h"
 
 int main() {
-    auto StringWriter = new FileStringWriter();
-    auto StringWriter1 = new ConsoleStringWriter();
-    StringWriter->StringWriter();
-    StringWriter1->StringWriter();
+    IStringWriter* StringWriter = new FileStringWriter();
+    IStringWriter* StringWriter1 = new ConsoleStringWriter();
+
+    StringWriterFactory::CreatWriter();
+    StringWriter->StringWriter("File Lorrami");
+    StringWriter1->StringWriter("Console Lorrami");
 
     return 777;
 }

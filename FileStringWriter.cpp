@@ -1,6 +1,5 @@
 #include "FileStringWriter.h"
-#include <iostream>
 
-void FileStringWriter::StringWriter() {
-    std::cout << "File writer";
+void FileStringWriter::StringWriter(std::string text) {
+    std::cout << text;
 }
