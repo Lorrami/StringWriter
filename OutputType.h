@@ -1,3 +1,4 @@
-enum class OutputType {
-
+enum class OutputType : char {
+    Console,
+    File
 };
