@@ -1,9 +1,9 @@
 #include "StringWriterFactory.h"
 
 int main() {
-    IStringWriter* writer = StringWriterFactory::CreatWriter(OutputType::Console);
+    std::unique_ptr<IStringWriter> writer = StringWriterFactory::CreatWriter(OutputType::Console);
 
-    writer->StringWriter("File print");
+    writer->StringWriter("Console print");
 
     return 777;
 }

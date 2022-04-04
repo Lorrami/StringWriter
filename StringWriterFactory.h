@@ -7,16 +7,16 @@
 
 class StringWriterFactory {
 public:
-    static IStringWriter* CreatWriter(OutputType type);
+    static std::unique_ptr<IStringWriter> CreatWriter(OutputType type);
 };
 
-IStringWriter* StringWriterFactory::CreatWriter(OutputType type) {
+std::unique_ptr<IStringWriter> StringWriterFactory::CreatWriter(OutputType type) {
     if (type == OutputType::Console) {
         std::cout << "Console print" << std::endl;
-        return new ConsoleStringWriter();
+        return std::unique_ptr<ConsoleStringWriter>();
     }
     else if (type == OutputType::File) {
         std::cout << "File print" <<std::endl;
-        return new FileStringWriter();
+        return std::unique_ptr<FileStringWriter>();
     }
 }
