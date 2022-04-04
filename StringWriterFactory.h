@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-
+#include "time.h"
 #include "OutputType.h"
 #include "IStringWriter.h"
 #include "ConsoleStringWriter.h"
@@ -13,10 +13,10 @@ public:
 };
 
 std::unique_ptr<IStringWriter> StringWriterFactory::CreatWriter(OutputType type) {
-    if (type == OutputType::Console) {
-        return std::make_unique<ConsoleStringWriter>();
-    }
-    else if (type == OutputType::File) {
-        return std::make_unique<FileStringWriter>();
+    switch (type) {
+        case OutputType::Console :
+            return std::make_unique<ConsoleStringWriter>();
+        case OutputType::File :
+            return std::make_unique<FileStringWriter>();
     }
 }
