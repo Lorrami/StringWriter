@@ -14,11 +14,9 @@ public:
 
 std::unique_ptr<IStringWriter> StringWriterFactory::CreatWriter(OutputType type) {
     if (type == OutputType::Console) {
-        std::cout << "Console print" << std::endl;
         return std::make_unique<ConsoleStringWriter>();
     }
     else if (type == OutputType::File) {
-        std::cout << "File print" <<std::endl;
         return std::make_unique<FileStringWriter>();
     }
 }
