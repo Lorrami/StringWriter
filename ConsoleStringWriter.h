@@ -2,6 +2,6 @@
 
 #include "IStringWriter.h"
 
-class ConsoleStringWriter : public IStringWriter{
-
+class ConsoleStringWriter : public IStringWriter {
+    void StringWriter() override;
 };

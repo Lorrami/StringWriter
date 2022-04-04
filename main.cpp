@@ -1,8 +1,11 @@
 #include <iostream>
 
-#include "IStringWriter.h"
+#include "FileStringWriter.h"
+#include "ConsoleStringWriter.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto StringWriter = new FileStringWriter();
+    StringWriter->StringWriter();
+
     return 777;
 }

@@ -1,5 +1,5 @@
 #pragma once
 
 class IStringWriter {
-    virtual void WriteString() = 0;
+    virtual void StringWriter() = 0;
 };
