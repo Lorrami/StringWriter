@@ -3,8 +3,8 @@ project(StringWriter)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set (SOURCES
+set (PROJECT_SOURCES
         "main.cpp"
 )
 
-add_executable(StringWriter ${SOURCES})
+add_executable(StringWriter ${PROJECT_SOURCES})
