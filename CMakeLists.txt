@@ -4,7 +4,6 @@ project(StringWriter)
 set(CMAKE_CXX_STANDARD 17)
 
 set (PROJECT_SOURCES
-        "main.cpp"
         "IStringWriter.cpp"
         "ConsoleStringWriter.cpp"
         "FileStringWriter.cpp"
